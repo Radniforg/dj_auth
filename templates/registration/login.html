@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Логин{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <div class="header">Пожалуйста, введите логин и пароль</div>
+            <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">Войти</button>
+        </form>
+    </div>
+{% endblock %}
